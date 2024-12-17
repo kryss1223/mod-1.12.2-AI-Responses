@@ -1,0 +1,17 @@
+[
+  {
+    "modid": "villageria",
+    "name": "Villager IA Mod",
+    "description": "Un mod para interactuar con aldeanos usando inteligencia artificial.",
+    "version": "1.0",
+    "mcversion": "1.12.2",
+    "authorList": ["TuNombre"],
+    "url": "https://example.com",
+    "updateUrl": "",
+    "credits": "Gracias a todos los desarrolladores de Forge.",
+    "logoFile": "",
+    "screenshots": [],
+    "dependencies": [],
+    "mainClass": "com.mod.ia.MainClass"
+  }
+]
