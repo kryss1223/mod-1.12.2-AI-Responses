@@ -35,15 +35,15 @@ public class VillagerInteractionHandler {
             System.out.println("Aldeano más cercano encontrado: " + closestVillager.getName());
             System.out.println("Posición: " + closestVillager.getPosition());
             ManageMessagePlayer.sendMessageToPlayer("Aldeano mas cercano encontrado");
-            //Iniciar el chat para capturar el mensaje del jugador
-            //Despues que este se cargue en el obtener respuesta de OpenAI
-            String lastmessage = ManageMessagePlayer.getLastMessage();
-            if (lastmessage == null || lastmessage.isEmpty()) {
-                lastmessage = "Nomba una fruta"; // Mensaje por defecto si no hay entrada del jugador
-            }
             
+            //Iniciar el chat para capturar el mensaje del jugador
+            String message = ManageMessagePlayer.getLastMessage();
+            if (message == null || message.isEmpty()) {
+                message = "Nomba una fruta"; // Mensaje por defecto si no hay entrada del jugador
+            }
+            //Despues que este se cargue en el obtener respuesta de OpenAI
             // Obtener respuesta de OpenAI
-            String aiResponse = AIResponseHandler.getAIResponse(lastmessage);
+            String aiResponse = AIResponseHandler.getAIResponse(message);
 
             // Mostrar la respuesta en el chat del juego
             mc.player.sendMessage(new TextComponentString("Aldeano: " + aiResponse));
